@@ -18,18 +18,23 @@ const Main = () => {
 
   const { progress } = useProgress();
   const [fadeOut, setFadeOut] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true); // Tracks the initial loading phase
   const lenis = useLenis();
 
+  // Handle the initial loading phase
   useEffect(() => {
-    lenis?.stop();
-  }, [lenis])
+    if (initialLoad) {
+      lenis?.stop(); // Only stop lenis during the initial load
+    }
+  }, [lenis, initialLoad]);
 
   useLayoutEffect(() => {
     if (progress === 100) {
       setFadeOut(true);
       lenis?.start();
+      setInitialLoad(false)
     }
-  }, [progress, lenis]);
+  }, [progress, lenis, initialLoad]);
 
   return (
     <ReactLenis root>
