@@ -1,7 +1,5 @@
 import { useTexture } from "@react-three/drei";
-import { MeshMatcapMaterialProps } from "@react-three/fiber";
 import { forwardRef } from "react";
-import { MeshMatcapMaterial } from "three";
 import React from "react";
 
 export const CustomMaterial = forwardRef((props, ref) => {

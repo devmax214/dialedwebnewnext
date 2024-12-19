@@ -18,8 +18,8 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 const Main = () => {
 
   // const { progress } = useProgress();
-  const [fadeOut, setFadeOut] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true); // Tracks the initial loading phase
+  // const [fadeOut, setFadeOut] = useState(false);
+  // const [initialLoad, setInitialLoad] = useState(true); // Tracks the initial loading phase
   const lenis = useLenis();
 
   // Handle the initial loading phase

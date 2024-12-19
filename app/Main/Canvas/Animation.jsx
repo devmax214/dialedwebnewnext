@@ -21,7 +21,7 @@ export default function Animation() {
                 <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
                     <Item3 />
                 </Float>
-                <Environment preset="sunset" />
+                {/* <Environment preset="sunset" /> */}
                 <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
             </Suspense>
         </Canvas>
