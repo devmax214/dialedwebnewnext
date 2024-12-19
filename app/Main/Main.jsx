@@ -1,5 +1,17 @@
 "use client";
+import dynamic from 'next/dynamic'
 import { ReactLenis, useLenis } from 'lenis/react'
+// const SectionHero = dynamic(() => import('./SectionHero').then(mod => mod.SectionHero), { ssr: false })
+// const SectionFooter = dynamic(() => import('./SectionFooter').then(mod => mod.SectionFooter), { ssr: false })
+// const SectionShowreel = dynamic(() => import('./SectionShowreel').then(mod => mod.SectionShowreel), { ssr: false })
+// const SectionTestimonials = dynamic(() => import('./SectionTestimonials').then(mod => mod.SectionTestimonials), { ssr: false })
+// const SectionTechstack = dynamic(() => import('./SectionTechstack').then(mod => mod.SectionTechstack), { ssr: false })
+// const SectionFlower = dynamic(() => import('./SectionFlower').then(mod => mod.SectionFlower), { ssr: false })
+// const SectionServices = dynamic(() => import('./SectionServices').then(mod => mod.SectionServices), { ssr: false })
+// const SectionProjects = dynamic(() => import('./SectionProjects').then(mod => mod.SectionProjects), { ssr: false })
+// const SectionProjectsMobile = dynamic(() => import('./SectionProjectsMobile').then(mod => mod.SectionProjectsMobile), { ssr: false })
+// const SectionKPI = dynamic(() => import('./SectionKPI').then(mod => mod.SectionKPI), { ssr: false })
+
 import { SectionHero } from "./SectionHero";
 import { SectionFooter } from "./SectionFooter";
 import { SectionShowreel } from "./SectionShowreel";
@@ -38,11 +50,11 @@ const Main = () => {
 
   return (
     <ReactLenis root>
-      <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
+      {/* <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
           <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
         </div>
-      </div>
+      </div> */}
       <SectionHero />
       <div className="normal-padding" />
       <SectionShowreel />

@@ -4,6 +4,6 @@ export default function Loading() {
             <div className="loading-image-box" >
                 <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
             </div>
-      </div>
+        </div>
     )
 }
