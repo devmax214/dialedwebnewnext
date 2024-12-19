@@ -4,10 +4,7 @@ import { forwardRef } from "react";
 import { MeshMatcapMaterial } from "three";
 import React from "react";
 
-export const CustomMaterial = forwardRef<
-  MeshMatcapMaterial,
-  MeshMatcapMaterialProps
->((props, ref) => {
+export const CustomMaterial = forwardRef((props, ref) => {
   // Load the "3.jpeg" texture directly
   const texture = useTexture("/images/1.jpeg");
 

@@ -8,8 +8,8 @@ import React from "react";
 const radius = 3;
 const count = 8;
 
-function Item(props: GroupProps) {
-  const ref = useRef<THREE.Group>(null);
+function Item(props) {
+  const ref = useRef(null);
 
   useFrame(() => {
     if (ref.current) {
@@ -29,7 +29,7 @@ function Item(props: GroupProps) {
 }
 
 export const Item3 = () => {
-  const groupRef = useRef<THREE.Group>(null!);
+  const groupRef = useRef(null);
 
   useFrame(() => {
     if (groupRef.current) {
