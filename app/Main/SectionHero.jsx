@@ -7,8 +7,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Animation from './Canvas/Animation'
-// const Animation = dynamic(() => import('./Canvas/Animation'), { ssr: false })
+// import Animation from './Canvas/Animation'
+const Animation = dynamic(() => import('./Canvas/Animation'), {
+  ssr: false
+})
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
