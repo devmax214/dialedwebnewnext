@@ -9,7 +9,7 @@ import { Item3 } from "../HeroModel/Coins";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export default Animation = () => {
+export default function Animation() {
 
     return (
         <Canvas
