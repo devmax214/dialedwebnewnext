@@ -49,9 +49,9 @@ export const Item3 = () => {
                 <Item
                   position={[
                     radius *
-                      Math.cos((index * 2 * Math.PI) / count + Math.PI / 4),
+                    Math.cos((index * 2 * Math.PI) / count + Math.PI / 4),
                     radius *
-                      Math.sin((index * 2 * Math.PI) / count + Math.PI / 4),
+                    Math.sin((index * 2 * Math.PI) / count + Math.PI / 4),
                     0,
                   ]}
                   rotation={[0, 0, (index * 2 * Math.PI) / count]}

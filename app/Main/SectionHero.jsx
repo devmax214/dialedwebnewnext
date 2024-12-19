@@ -77,7 +77,7 @@ export const SectionHero = () => {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -140,10 +140,14 @@ export const SectionHero = () => {
                   <ArrowUpRight className="button-icon" />
                 </div>
               </button>
-              </div>
+            </div>
           </div>
           <div className="hero-content-right" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-            <Canvas style={{ pointerEvents: 'auto', width: "100%", height: "100%", position: "absolute", top: 0, left: 0, zIndex: 1 }} camera={{ position: [ 2, 0, 10], fov: 35 }}>
+            <Canvas
+              style={{ pointerEvents: 'auto', width: "100%", height: "100%", position: "absolute", top: 0, left: 0, zIndex: 1 }}
+              camera={{ position: [2, 0, 10], fov: 35 }}
+              dpr={[1, 2]}
+              gl={{ powerPreference: 'high-performance', preserveDrawingBuffer: true }}>
               <Suspense fallback >
                 <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
                   <Item3 />
@@ -157,24 +161,24 @@ export const SectionHero = () => {
         <div className="hero-content-bottom opacity-blur" ref={logosWrapperRef} >
           <Marquee className="hero-content-bottom-row" gradient={true} gradientColor="#010101" gradientWidth={250}>
             {[
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
-              "/logos/webflow.svg", 
-              "/logos/stripe.svg", 
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
+              "/logos/adobe.webp",
+              "/logos/webflow.svg",
+              "/logos/stripe.svg",
             ].map((src, i) => (
               <div className="hero-content-bottom-item" key={i}>
                 <Image width={100} height={100} src={src} alt={`Marquee item ${i + 1}`} className="hero-content-bottom-image" />
