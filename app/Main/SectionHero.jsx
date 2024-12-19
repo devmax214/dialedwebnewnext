@@ -1,16 +1,14 @@
 /* eslint-disable react/jsx-key */
 import dynamic from "next/dynamic";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight } from "lucide-react";
-import { Canvas } from "@react-three/fiber";
-import { Environment, Float, OrbitControls } from "@react-three/drei";
 import Image from "next/image";
-import { Item3 } from "./HeroModel/Coins";
-const Animation = dynamic(() => import('./Canvas/Animation'), { ssr: false })
+import Animation from './Canvas/Animation'
+// const Animation = dynamic(() => import('./Canvas/Animation'), { ssr: false })
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 

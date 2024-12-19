@@ -1,5 +1,5 @@
 "use client";
-import dynamic from 'next/dynamic'
+
 import { ReactLenis, useLenis } from 'lenis/react'
 import { SectionHero } from "./SectionHero";
 import { SectionFooter } from "./SectionFooter";
@@ -13,11 +13,11 @@ import { SectionProjectsMobile } from "./SectionProjectsMobile";
 import { SectionKPI } from "./SectionKPI";
 import "./main.css";
 import { useEffect, useLayoutEffect, useState } from 'react';
-import { useProgress } from "@react-three/drei";
+// import { useProgress } from "@react-three/drei";
 
 const Main = () => {
 
-  const { progress } = useProgress();
+  // const { progress } = useProgress();
   const [fadeOut, setFadeOut] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true); // Tracks the initial loading phase
   const lenis = useLenis();

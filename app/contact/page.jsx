@@ -1,5 +1,13 @@
 import "./contact.css";
-import { ContactPageSection } from "./ContactPageSection";
+import dynamic from "next/dynamic";
+const ContactPageSection = dynamic(() => import('./ContactPageSection').then(mod => mod.ContactPageSection), {
+  ssr: false,
+  loading: () => <div className="loading-screen" >
+    <div className="loading-image-box" >
+      <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
+    </div>
+  </div>
+})
 
 export const metadata = {
   title: 'Dialedweb | Get in Touch',

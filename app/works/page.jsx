@@ -1,5 +1,13 @@
 import "./works.css";
-import { WorksPageSection } from "./WorksPageSection";
+import dynamic from "next/dynamic";
+const WorksPageSection = dynamic(() => import('./WorksPageSection').then(mod => mod.WorksPageSection), {
+  ssr: false,
+  loading: () => <div className="loading-screen" >
+    <div className="loading-image-box" >
+      <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
+    </div>
+  </div>
+})
 
 export const metadata = {
   title: 'Dialedweb | Works',

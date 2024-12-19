@@ -1,5 +1,5 @@
 import { Center, Instance, Instances } from "@react-three/drei";
-import { GroupProps, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 import { CustomMaterial } from "./material";

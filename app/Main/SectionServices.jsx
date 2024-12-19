@@ -24,7 +24,7 @@ export const SectionServices = () => {
   useEffect(() => {
 
     // subheadline box animation
-    gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" }});
+    gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" } });
 
     // headline text animation
     const titleSplit = new SplitText(titleRef.current, { type: "words" });
@@ -35,7 +35,7 @@ export const SectionServices = () => {
     gsap.fromTo(descriptionSplit.words, { filter: 'blur(8px)', opacity: 0, skewX: 0 }, { opacity: 1, filter: 'blur(0px)', skewX: 0, stagger: 0.025, ease: 'sine', scrollTrigger: { trigger: descriptionRef.current, start: "top 95%" } });
 
     // button animation
-    gsap.to(buttonRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: buttonRef.current, start: "top 95%" }});
+    gsap.to(buttonRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } });
   }, [])
 
   useEffect(() => {
@@ -55,12 +55,12 @@ export const SectionServices = () => {
     if (!isOverlayVisible) {
       // Show overlay
       gsap.to(overlayRef.current, { display: "flex", opacity: 1, duration: 0.3 });
-      gsap.fromTo(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.5, ease: customEase } );
-      gsap.fromTo(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.5, ease: customEase } );
+      gsap.fromTo(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.5, ease: customEase });
+      gsap.fromTo(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.5, ease: customEase });
     } else {
       // Hide overlay
-      gsap.to(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0, duration: 0.5, ease: customEase } );
-      gsap.to(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5, duration: 0.5, ease: customEase } );
+      gsap.to(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0, duration: 0.5, ease: customEase });
+      gsap.to(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5, duration: 0.5, ease: customEase });
       gsap.to(overlayRef.current, { delay: 0.1, opacity: 0, duration: 0.5, onComplete: () => { overlayRef.current.style.display = "none"; } });
     }
     setIsOverlayVisible(!isOverlayVisible);
@@ -72,7 +72,7 @@ export const SectionServices = () => {
         <div className="calendly-overlay-widget" ref={overlayWidgetRef} >
           <div className="calendly-overlay-widget-border" />
           <div className="calendly-overlay-widget-scrollbar-hider" />
-          <div className="calendly-inline-widget" data-url="https://calendly.com/dialedweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=9b92a2"/>
+          <div className="calendly-inline-widget" data-url="https://calendly.com/dialedweb/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=9b92a2" />
         </div>
         <div className="calendly-overlay-widget-button" ref={overlayWidgetButtonRef} onClick={toggleOverlay} >
           <X className="calendly-overlay-widget-button-icon" />
