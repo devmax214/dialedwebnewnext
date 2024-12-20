@@ -1,12 +1,13 @@
 /* eslint-disable react/jsx-key */
 import dynamic from "next/dynamic";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { useProgress } from "@react-three/drei";
 // import Animation from './Canvas/Animation'
 const Animation = dynamic(() => import('./Canvas/Animation'), {
   ssr: false
@@ -25,26 +26,36 @@ export const SectionHero = () => {
   const logosWrapperRef = useRef()
   const cursor = useRef()
   const [showCursor, setShowCursor] = useState(false)
+  const { progress } = useProgress()
+  const [playAnimation, setPlayAnimation] = useState(false);
+
+  useLayoutEffect(() => {
+    if (progress === 100) {
+      setTimeout(() => {
+        setPlayAnimation(true)
+      }, 150);
+    }
+  }, [progress])
 
   // GSAP ANIMATIONS
   useEffect(() => {
+    if (playAnimation) {
+      gsap.set(titleRef.current, { opacity: 1 })
 
-    gsap.set(titleRef.current, { opacity: 1 })
+      const titleSplit = new SplitText(titleRef.current, { type: "chars" });
+      gsap.fromTo(titleSplit.chars, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.02, duration: 0.75, ease: "power1" });
 
-    const titleSplit = new SplitText(titleRef.current, { type: "chars" });
-    gsap.fromTo(titleSplit.chars, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.02, duration: 0.75, ease: "power1" });
+      // description text animation
+      gsap.to(descriptionRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
 
-    // description text animation
-    gsap.to(descriptionRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+      // buttons animation
+      gsap.to(buttonRef1.current, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
+      gsap.to(buttonRef2.current, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
 
-    // buttons animation
-    gsap.to(buttonRef1.current, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
-    gsap.to(buttonRef2.current, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
-
-    // logos wrapper animation
-    gsap.to(logosWrapperRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
-
-  }, [])
+      // logos wrapper animation
+      gsap.to(logosWrapperRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+    }
+  }, [playAnimation])
 
   // FOLLOWING CURSOR
   useEffect(() => {
