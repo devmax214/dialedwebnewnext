@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { ReactLenis, useLenis } from 'lenis/react'
 import { SectionHero } from "./SectionHero";
 import { SectionFooter } from "./SectionFooter";
@@ -41,7 +42,7 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
-          <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
+          <Image src="/images/loading.gif" width={500} height={500} className="loading-image" alt="Loading Image" unoptimized />
         </div>
       </div>
       <SectionHero />

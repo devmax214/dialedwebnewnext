@@ -1,5 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../Main/SectionFooter";
 import gsap from "gsap";
@@ -150,7 +151,7 @@ export const AboutPageSection = () => {
                     </div>
                     <div className="about-sticky-item-right">
                         <div className="about-sticky-item-right-imagebox">
-                            <img src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="" />
+                            <Image width={500} height={500} src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="" />
                         </div>
                     </div>
                 </div>
@@ -164,7 +165,7 @@ export const AboutPageSection = () => {
                     </div>
                     <div className="about-sticky-item-right">
                         <div className="about-sticky-item-right-imagebox">
-                            <img src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="" />
+                            <Image width={500} height={500} src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="" />
                         </div>
                     </div>
                 </div>
@@ -178,7 +179,7 @@ export const AboutPageSection = () => {
                     </div>
                     <div className="about-sticky-item-right">
                         <div className="about-sticky-item-right-imagebox">
-                            <img src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="" />
+                            <Image width={500} height={500} src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="" />
                         </div>
                     </div>
                 </div>
@@ -192,7 +193,7 @@ export const AboutPageSection = () => {
                     </div>
                     <div className="about-sticky-item-right">
                         <div className="about-sticky-item-right-imagebox">
-                            <img src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="" />
+                            <Image width={500} height={500} src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="" />
                         </div>
                     </div>
                 </div>

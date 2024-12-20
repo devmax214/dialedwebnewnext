@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Play } from "lucide-react";
@@ -75,19 +76,19 @@ export const SectionShowreel = () => {
         </div>
         <div className="showreel-content-row">
           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef1} >
-            <img src="/logos/awwwards.svg" className="showreel-content-row-item-image" alt="" />
+            <Image width={500} height={500} src="/logos/awwwards.svg" className="showreel-content-row-item-image" alt="" />
             <div className="showreel-content-row-item-grid" />
           </div>
           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef2} >
-            <img src="/logos/cssbestui.svg" className="showreel-content-row-item-image" alt="" />
+            <Image width={500} height={500} src="/logos/cssbestui.svg" className="showreel-content-row-item-image" alt="" />
             <div className="showreel-content-row-item-grid" />
           </div>
           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef3} >
-            <img src="/logos/cssbestinnovation.svg" className="showreel-content-row-item-image" alt="" />
+            <Image width={500} height={500} src="/logos/cssbestinnovation.svg" className="showreel-content-row-item-image" alt="" />
             <div className="showreel-content-row-item-grid" />
           </div>
           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef4} >
-            <img src="/logos/cssbestux.svg" className="showreel-content-row-item-image" alt="" />
+            <Image width={500} height={500} src="/logos/cssbestux.svg" className="showreel-content-row-item-image" alt="" />
             <div className="showreel-content-row-item-grid" />
           </div>
         </div>

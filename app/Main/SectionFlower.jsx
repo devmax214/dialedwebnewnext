@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
-import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import NextImage from "next/image";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -117,7 +118,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef1} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+                <NextImage width={500} height={500} src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
               </div>
             </span>
           </div>
@@ -138,7 +139,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef2} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+                <NextImage width={500} height={500} src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
               </div>
             </span>
             <span>

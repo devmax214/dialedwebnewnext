@@ -1,5 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { ReactLenis } from 'lenis/react'
 import "../works.css";
 import { SectionFooter } from "../../Main/SectionFooter";
@@ -104,7 +105,7 @@ const CaseStudies = () => {
                         <video src="/casestudy/casestudytestvideo.mov" className="casestudy-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                     </div>
                     <div className="casestudy-top-gradient" />
-                    <img src="/casestudy/casestudyphoto.webp" ref={imageRef} className="casestudy-top-image" alt="" />
+                    <Image width={500} height={500} src="/casestudy/casestudyphoto.webp" ref={imageRef} className="casestudy-top-image" alt="" />
                 </div>
                 <div className="casestudy-center">
                     <h2 className="small-subheadline white" ref={descriptionRef} >We created a seamless experience for Lumara’s eco-home containers, creating unique brand. By challenging the user experience, we enabled people to easily customize their containers from their computer, bringing Lumara’s vision to life with intuitive and personalized design and development solutions, unique creativity, without overlooking essential SEO and speed metrics.</h2>
@@ -117,15 +118,15 @@ const CaseStudies = () => {
                             <p className="small-description white" ref={casestudyCenterRef3} >Team</p>
                             <div className="casestudy-center-item-column">
                                 <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
-                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+                                    <Image width={500} height={500} src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
                                     <p className="small-description grey" >Idan Zeidman</p>
                                 </div>
                                 <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
-                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+                                    <Image width={500} height={500} src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
                                     <p className="small-description grey" >Lorenzo Noya</p>
                                 </div>
                                 <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
-                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+                                    <Image width={500} height={500} src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
                                     <p className="small-description grey" >Matvey Vasilyev</p>
                                 </div>
                             </div>
@@ -134,22 +135,22 @@ const CaseStudies = () => {
                 </div>
                 <div className="casestudy-bottom">
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef1} >
-                        <img src="/casestudy/casestudyphoto1.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto1.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef2} >
-                        <img src="/casestudy/casestudyphoto2.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto2.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-full-imagebox" ref={casestudyImageRef3} >
-                        <img src="/casestudy/casestudyphoto3.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto3.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef4} >
-                        <img src="/casestudy/casestudyphoto4.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto4.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef5} >
-                        <img src="/casestudy/casestudyphoto5.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto5.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-full-imagebox" ref={casestudyImageRef6} >
-                        <img src="/casestudy/casestudyphoto6.avif" className="casestudy-bottom-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/casestudyphoto6.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                 </div>
             </div>

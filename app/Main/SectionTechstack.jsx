@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-key */
-import React, { Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { ArrowUpRight, ChevronRight, Hand, Layers, Link, Send } from "lucide-react";
+import { ArrowUpRight, Layers } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { PrevButton, NextButton, usePrevNextButtons} from "./Carousel/EmblaCarouselArrowButtons"
+import { usePrevNextButtons} from "./Carousel/EmblaCarouselArrowButtons"
 import { DotButton, useDotButton } from './Carousel/EmblaCarouselDotButton'
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -204,32 +205,32 @@ export const SectionTechstack = () => {
                     <div className="techstack-item-content">
                         <div className="techstack-item-content-column">
                             <div className="techstack-item-content-column-slider">
-                                <img src="/images/abs.webp" className="techstack-item-content-column-slider-image" alt="" />
+                                <Image width={500} height={500} src="/images/abs.webp" className="techstack-item-content-column-slider-image" alt="" />
                                 <div className="techstack-item-content-column-slider-carousel" ref={emblaRef} >
                                     <div className="techstack-item-content-column-slider-carousel-row">
                                         <div className="techstack-item-content-column-slider-item">
                                             <div className="techstack-item-content-column-slider-item-child">
-                                                <img src="/logos/blenderwhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
+                                                <Image width={500} height={500} src="/logos/blenderwhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
                                             </div>
                                         </div>
                                         <div className="techstack-item-content-column-slider-item">
                                             <div className="techstack-item-content-column-slider-item-child">
-                                                <img src="/logos/ae.svg" className="techstack-item-content-column-slider-item-image" alt="" />
+                                                <Image width={500} height={500} src="/logos/ae.svg" className="techstack-item-content-column-slider-item-image" alt="" />
                                             </div>
                                         </div>
                                         <div className="techstack-item-content-column-slider-item">
                                             <div className="techstack-item-content-column-slider-item-child">
-                                                <img src="/logos/photoshop.svg" className="techstack-item-content-column-slider-item-image" alt="" />
+                                                <Image width={500} height={500} src="/logos/photoshop.svg" className="techstack-item-content-column-slider-item-image" alt="" />
                                             </div>
                                         </div>
                                         <div className="techstack-item-content-column-slider-item">
                                             <div className="techstack-item-content-column-slider-item-child">
-                                                <img src="/logos/davinciresolvewhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
+                                                <Image width={500} height={500} src="/logos/davinciresolvewhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
                                             </div>
                                         </div>
                                         <div className="techstack-item-content-column-slider-item">
                                             <div className="techstack-item-content-column-slider-item-child">
-                                                <img src="/logos/houdiniwhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
+                                                <Image width={500} height={500} src="/logos/houdiniwhite.svg" className="techstack-item-content-column-slider-item-image" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -296,7 +297,7 @@ export const SectionTechstack = () => {
                                 <div className="techstack-item-card-content techstack-item-card-content-1">
                                     <div className="techstack-item-card-content-top">
                                         <p className="description white" >Slack</p>
-                                        <img src="/logos/slack.png" className="techstack-item-card-content-top-image" alt="" />
+                                        <Image width={500} height={500} src="/logos/slack.png" className="techstack-item-card-content-top-image" alt="" />
                                     </div>
                                     <div className="techstack-item-card-content-bottom">
                                         <p className="small-description grey" >Content draft progress at 75%. Feedback incorporated, updates shared.</p>
@@ -308,7 +309,7 @@ export const SectionTechstack = () => {
                                 <div className="techstack-item-card-content techstack-item-card-content-2">
                                     <div className="techstack-item-card-content-top">
                                         <p className="description white" >Gmail</p>
-                                        <img src="/logos/gmail.png" className="techstack-item-card-content-top-image" alt="" />
+                                        <Image width={500} height={500} src="/logos/gmail.png" className="techstack-item-card-content-top-image" alt="" />
                                     </div>
                                     <div className="techstack-item-card-content-bottom">
                                         <p className="small-description grey" >Development is now 90% complete. Testing schedule shared with all stakeholders.</p>
@@ -320,7 +321,7 @@ export const SectionTechstack = () => {
                                 <div className="techstack-item-card-content">
                                     <div className="techstack-item-card-content-top">
                                         <p className="description white" >Notion</p>
-                                        <img src="/logos/notion.png" className="techstack-item-card-content-top-image" alt="" />
+                                        <Image width={500} height={500} src="/logos/notion.png" className="techstack-item-card-content-top-image" alt="" />
                                     </div>
                                     <div className="techstack-item-card-content-bottom">
                                         <p className="small-description grey" >Design phase completed successfully. Tasks updated and prepared for review.</p>

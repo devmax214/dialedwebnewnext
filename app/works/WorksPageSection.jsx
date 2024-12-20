@@ -6,7 +6,6 @@ import { PrevButton, NextButton, usePrevNextButtons} from "../Main/Carousel/Embl
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowUpRight, Zap } from "lucide-react";
 import { SectionFooter } from "../Main/SectionFooter";
-import { usePathname, useRouter } from 'next/navigation';
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -362,7 +361,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef1} >
-                    <img src="/images/test14.webp" className="works-industries-item-right-image" alt="" />
+                    <Image width={500} height={500} src="/images/test14.webp" className="works-industries-item-right-image" alt="" />
                   </div>
                 </div>
               </div>
@@ -373,7 +372,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef2} >
-                    <img src="/images/test17.webp" className="works-industries-item-right-image" alt="" />
+                    <Image width={500} height={500} src="/images/test17.webp" className="works-industries-item-right-image" alt="" />
                   </div>
                 </div>
               </div>
@@ -384,7 +383,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef3} >
-                    <img src="/images/test18.webp" className="works-industries-item-right-image" alt="" />
+                    <Image width={500} height={500} src="/images/test18.webp" className="works-industries-item-right-image" alt="" />
                   </div>
                 </div>
               </div>
@@ -395,7 +394,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef4} >
-                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="" />
+                    <Image width={500} height={500} src="/images/test19.webp" className="works-industries-item-right-image" alt="" />
                   </div>
                 </div>
               </div>
@@ -436,7 +435,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/casestudy/cs1.webp" className="casestudies-item-content-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/cs1.webp" className="casestudies-item-content-image" alt="" />
                       </div>
                     </div>
                   </div>
@@ -458,7 +457,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/casestudy/cs4.webp" className="casestudies-item-content-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/cs4.webp" className="casestudies-item-content-image" alt="" />
                       </div>
                     </div>
                   </div>
@@ -480,7 +479,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/casestudy/cs3.webp" className="casestudies-item-content-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/cs3.webp" className="casestudies-item-content-image" alt="" />
                       </div>
                     </div>
                   </div>
@@ -502,7 +501,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/casestudy/cs2.webp" className="casestudies-item-content-image" alt="" />
+                        <Image width={500} height={500} src="/casestudy/cs2.webp" className="casestudies-item-content-image" alt="" />
                       </div>
                     </div>
                   </div>
